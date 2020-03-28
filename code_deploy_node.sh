@@ -1,18 +1,16 @@
 #!/bin/bash
+echo " "
+echo "--------------------------------"
+echo "Install for Nodejs (12.x)"
+echo "--------------------------------"
 
-echo "Updating Yum..."
+curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
+# install node and npm in one line
+yum install -y nodejs
+# install pm2 to restart node app
 
-sudo yum update -y
+echo "--------------------------------"
+echo "Installing pm2"
+echo "--------------------------------"
 
-echo "Updating Installing Code Deploy Agent (ap-southeast-1)..."
-sudo yum install ruby
-sudo yum install wget
-
-cd /home/ec2-user
-wget https://aws-codedeploy-ap-southeast-1.s3.ap-southeast-1.amazonaws.com/latest/install
-chmod +x ./install
-sudo ./install auto
-
-echo "Checking Codedeploy Agent Status"
-sudo service codedeploy-agent status
-
+npm i -g pm2@latest

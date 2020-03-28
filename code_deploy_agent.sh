@@ -1,7 +1,7 @@
 #!/bin/bash
 echo " "
 echo "--------------------------------"
-echo "Updating Dependencies..."
+echo "Install for Code Deploy Agent"
 echo "--------------------------------"
 
 sudo yum update -y
