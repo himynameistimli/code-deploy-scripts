@@ -11,9 +11,9 @@ export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 
 # INSTALL DEPENDENCIES
-yum install -y zlib-devel epel-release python36 python36-devel mysql-devel httpd-devel
-yum -y groupinstall development
-yum update -y
+sudo yum install -y zlib-devel epel-release python36 python36-devel mysql-devel httpd-devel
+sudo yum -y groupinstall development
+sudo yum update -y
 
 
 # BUILD MOD_WSGI AND INSTALL
